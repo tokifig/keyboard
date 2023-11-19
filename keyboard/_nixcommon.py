@@ -149,8 +149,8 @@ def aggregate_devices(type_name):
         fake_device._input_file = uinput
         fake_device._output_file = uinput
     except IOError as e:
-        import warnings
-        warnings.warn('Failed to create a device file using `uinput` module. Sending of events may be limited or unavailable depending on plugged-in devices.', stacklevel=2)
+        # import warnings
+        # warnings.warn('Failed to create a device file using `uinput` module. Sending of events may be limited or unavailable depending on plugged-in devices.', stacklevel=2)
         fake_device = None
 
     # We don't aggregate devices from different sources to avoid
